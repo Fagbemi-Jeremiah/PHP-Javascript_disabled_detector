@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+## PHP-Javascript_disabled_detector
 
-You can use the [editor on GitHub](https://github.com/Fagbemi-Jeremiah/PHP-Javascript_disabled_detector/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Many people have always wanted to use php to detect if javascript is disabled  but now you can [download it here](https://github.com/Fagbemi-Jeremiah/PHP-Javascript_disabled_detector/) 
+To check if javascipt is disabled
+include the script by using 
+```php
+include 'path/to/Fagbemi-Jeremiah-noscript-detect-serverside.php';
 ```
+whenever javascript is disabled the url would contain
+~~~
+noscript=yes
+~~~
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Fagbemi-Jeremiah/PHP-Javascript_disabled_detector/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+if you would not like to noscript=yes then set the $Fagbemi-Jeremiah-noscript-detect-serverside-link_to_use to "foo=bar"
+Example
+```php
+//the equals sign is compulsory and there should be no space
+$Fagbemi-Jeremiah-noscript-detect-serverside-link_to_use = "my_site_has_javascript_disabled=true";
+//include the file after declaring the variable
+include 'path/to/Fagbemi-Jeremiah-noscript-detect-serverside.php';
+```
